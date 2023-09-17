@@ -69,6 +69,7 @@ generic (N : integer := 8);
             CPOL : in std_logic; 
             CPHA : in std_logic; 
             TxValid : in std_logic; 
+            RxValid : in std_logic; 
             rst : in std_logic;
             TxMosiData : in std_logic_vector (N-1 downto 0); 
             TxReady : out std_logic; 
@@ -84,6 +85,7 @@ component SPI_Rx is
             CPHA : in std_logic; 
             TxValid : in std_logic; 
             RxMisoBit : in std_logic; 
+            TxReady : in std_logic; 
             rst : in std_logic; 
             RxValid : out std_logic; 
             RxMisoData : out std_logic_vector
@@ -95,7 +97,7 @@ signal CPOL : std_logic := '0';
 signal CPHA : std_logic := '0'; 
 signal TxValid : std_logic := '0'; 
 signal clkSPI : std_logic := '0'; 
-signal RxVFlag : std_logic := '0'; 
+signal RxValidOUT : std_logic := '0'; 
 signal detect : std_logic := '0'; 
 signal TxMosiData : std_logic_vector (N-1 downto 0) := (others => '0'); 
 signal RxMisoOUT : std_logic_vector (N-1 downto 0) := (others => '0'); 
@@ -105,22 +107,25 @@ signal TxReady_t : std_logic := '0';
 signal TxMosiBit_t : std_logic := '0'; 
 signal RxMisoData_t : std_logic_vector (N-1 downto 0) := (others => '0');  
 -- Dummies --
-signal edgeLeadIO, edgeFollowIO : std_logic; 
+signal TxEdgeLeadIO, TxEdgeFollowIO : std_logic := '0'; 
+signal RxEdgeLeadIO, RxEdgeFollowIO : std_logic := '0'; 
 
 
 begin
     -- SPI MODE --
     with spiMode select CPOL <= 
-        '0' when ("00" or "01"), 
+        '0' when "00" , 
+        '0' when "01",
         '1' when others; 
 
     with spiMode select CPHA <= 
-        '0' when ("00" or "10"), 
+        '0' when "00", 
+        '0' when "10", 
         '1' when others; 
 
     -- Edge Detects -- 
-    EdgeDetect(TxValidIN, clk, TxValid, edgeLeadIO, edgeFollowIO);
-    EdgeDetect(RxValidOUT, clk, RxValid_t, edgeLeadIO, edgeFollowIO);
+    EdgeDetect(TxValidIN, clk, TxValid, TxEdgeLeadIO, TxEdgeFollowIO);
+    EdgeDetect(RxValidOUT, clk, RxValid_t, RxEdgeLeadIO, RxEdgeFollowIO);
     -- Registers -- 
     SAEn_nBitReg(RxValid_t, rst, rst, clk, RxMisoOUT, RxMisoData_t); 
     SAEn_nBitReg(TxValid, rst, rst, clk, TxMosiIN, TxMosiData); 
@@ -144,6 +149,7 @@ begin
             CPOL => CPOL, 
             CPHA => CPHA, 
             TxValid => TxValid, 
+            RxValid => RxValid_t,
             rst => rst, 
             TxMosiData => TxMosiData, 
             TxReady => TxReady_t, 
@@ -158,7 +164,8 @@ begin
             CPOL => CPOL, 
             CPHA => CPHA, 
             TxValid => TxValid, 
-            RxMisoBit => RxMisoBit_t,
+            RxMisoBit => RxMisoBit,
+            TxReady => TxReady_t, 
             rst => rst, 
             RxValid => RxValidOUT, 
             RxMisoData => RxMisoOUT

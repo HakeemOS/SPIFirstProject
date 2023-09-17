@@ -2,12 +2,11 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Sep  1 19:44:06 2023
-# Process ID: 108156
+# Start of session at: Fri Sep 15 09:43:16 2023
+# Process ID: 2776
 # Current directory: C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.sim/sim_1/behav/xsim/xsim.dir/SPIRx_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.sim/sim_1/behav/xsim/xsim.dir/SPITx_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.sim/sim_1/behav/xsim/xsim.dir/SPIRx_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Sep  1 19:44:06 2023...
+source C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.sim/sim_1/behav/xsim/xsim.dir/SPITx_tb_behav/webtalk/xsim_webtalk.tcl -notrace
