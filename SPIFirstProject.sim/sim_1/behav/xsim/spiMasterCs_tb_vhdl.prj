@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../SPIFirstProject.srcs/sources_1/new/SPI_Rx.vhd" \
+"../../../../SPIFirstProject.srcs/sources_1/new/SPI_Tx.vhd" \
+"../../../../SPIFirstProject.srcs/sources_1/new/clk_SPI.vhd" \
+
+vhdl myLib  \
+"../../../../SPIFirstProject.srcs/sources_1/imports/new/paraPcr_p.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../SPIFirstProject.srcs/sources_1/new/spiMasterCs_s.vhd" \
+"../../../../SPIFirstProject.srcs/sim_1/new/spiMasterCs_tb.vhd" \
+
+# Do not sort compile order
+nosort

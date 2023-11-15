@@ -49,7 +49,7 @@ end SPI_Tx;
 
 architecture Behavioral of SPI_Tx is
 
-signal TxReady_t : std_logic := '0';
+signal TxReady_t : std_logic := '1';
 signal TxMosiBit_t : std_logic := '0'; 
 signal TxFlag : std_logic := '0'; 
 signal TxEdge : std_logic := '0'; 
@@ -63,7 +63,7 @@ begin
     proc1 : process( clk, clkSPI, rst)
     begin
         if (rst = '1') then
-            TxReady_t <= '0'; 
+            TxReady_t <= '1'; 
             TxMosiBit_t <= '0'; 
             TxFlag <= '0'; 
             bitIndex <= N-1; 
@@ -116,9 +116,9 @@ begin
                         TxReady_t <= '1'; 
                         TxFlag <= '0'; 
                     elsif ((cDetect = not clkSPI) and clkSPI = '0') then -- formatting 
-                        if (rising_edge(clk)) then
+                        --if (falling_edge(clk)) then
                             TxMosiBit_t <= '0';
-                        end if ;
+                        --end if ;
                     --elsif (RxValid = '1') then
                     --    bitIndex <= N-1; 
                     --    TxReady_t <= '1'; 

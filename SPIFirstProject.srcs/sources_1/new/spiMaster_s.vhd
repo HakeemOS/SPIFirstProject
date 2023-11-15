@@ -45,7 +45,7 @@ entity spiMaster_s is
             RxValid : out std_logic; 
             TxReady : out std_logic; 
             TxMosiBit : out std_logic; 
-            RxMisoData : out std_logic_vector 
+            RxMisoData : out std_logic_vector (N-1 downto 0)
     );
 end spiMaster_s;
 
@@ -103,7 +103,7 @@ signal TxMosiData : std_logic_vector (N-1 downto 0) := (others => '0');
 signal RxMisoOUT : std_logic_vector (N-1 downto 0) := (others => '0'); 
 -- Output Signals --
 signal RxValid_t : std_logic := '0'; 
-signal TxReady_t : std_logic := '0'; 
+signal TxReady_t : std_logic := '1'; 
 signal TxMosiBit_t : std_logic := '0'; 
 signal RxMisoData_t : std_logic_vector (N-1 downto 0) := (others => '0');  
 -- Dummies --

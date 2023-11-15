@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Sep 21 08:54:34 2023
+# Process ID: 42256
+# Current directory: C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.runs/impl_1
+# Command line: vivado.exe -log spiMaster_s.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source spiMaster_s.tcl -notrace
+# Log file: C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.runs/impl_1/spiMaster_s.vdi
+# Journal file: C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source spiMaster_s.tcl -notrace

@@ -39,7 +39,7 @@ architecture Behavioral of spiMaster_tb is
 
 component spiMaster_s is 
     generic (   spiMode : std_logic_vector (1 downto 0) := "00";
-                N : integer := 8
+               N : integer := 8
     );
     port (  clk : in std_logic; 
             TxValidIN : in std_logic; 
@@ -168,7 +168,6 @@ begin
         wait for 80ns; 
 
         RxMisoBit <= '1';
-
 
         wait; 
 

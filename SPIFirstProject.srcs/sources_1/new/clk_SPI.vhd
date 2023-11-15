@@ -43,12 +43,12 @@ end clk_SPI;
 
 architecture Behavioral of clk_SPI is
 
-constant MaxPulse : integer := (N*2)+2;
+constant MaxPulse : integer := (N*2)+6;
 
 signal count : std_logic := '0'; 
 signal clkSPI_t : std_logic := '0'; 
 signal initFlag : std_logic := '0';
-signal pulseCount : integer range 0 to MaxPulse := 18; 
+signal pulseCount : integer range 0 to MaxPulse := 22; 
 
 begin
 
@@ -64,7 +64,7 @@ begin
             end if ;
             if (TxValid = '1') then
                 pulseCount <= 0; 
-            elsif (pulseCount < 18) then
+            elsif (pulseCount < 22) then
                 if (count = '1') then
                     clkSPI_t <= not clkSPI_t; 
                     pulseCount <= pulseCount + 1;

@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.sim/sim_1/synth/timing/xsim/spiMaster_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Rx
+INFO: [VRFC 10-311] analyzing module SPI_Tx
+INFO: [VRFC 10-311] analyzing module clk_SPI
+INFO: [VRFC 10-311] analyzing module spiMaster_s
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.srcs/sim_1/new/spiMaster_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'spiMaster_tb'

@@ -1,6 +1,6 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 18783f4d3d784bc9958d72ebca6a5dfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L myLib -L secureip --snapshot spiMaster_tb_behav xil_defaultlib.spiMaster_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 18783f4d3d784bc9958d72ebca6a5dfb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L myLib -L secureip --snapshot spiMasterCs_tb_behav xil_defaultlib.spiMasterCs_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,11 +10,11 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package mylib.parapcr_p
 Compiling package ieee.numeric_std
+Compiling package mylib.parapcr_p
 Compiling architecture behavioral of entity xil_defaultlib.clk_SPI [clk_spi_default]
 Compiling architecture behavioral of entity xil_defaultlib.SPI_Tx [spi_tx_default]
 Compiling architecture behavioral of entity xil_defaultlib.SPI_Rx [\SPI_Rx(7,0)\]
-Compiling architecture behavioral of entity xil_defaultlib.spiMaster_s [\spiMaster_s(spimode="11")(7,0)\]
-Compiling architecture behavioral of entity xil_defaultlib.spimaster_tb
-Built simulation snapshot spiMaster_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.spiMasterCs_s [spimastercs_s_default]
+Compiling architecture behavioral of entity xil_defaultlib.spimastercs_tb
+Built simulation snapshot spiMasterCs_tb_behav

@@ -1,0 +1,9 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 18783f4d3d784bc9958d72ebca6a5dfb --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spiMaster_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spiMaster_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3146] binding entity '\spiMaster_s\' does not have generic 'spimode' [C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.srcs/sim_1/new/spiMaster_tb.vhd:41]
+ERROR: [VRFC 10-3146] binding entity '\spiMaster_s\' does not have generic 'n' [C:/Users/squid/OneDrive/Documents/Vivado/2023/SPIFirstProject/SPIFirstProject.srcs/sim_1/new/spiMaster_tb.vhd:42]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
